@@ -14,152 +14,237 @@
     body {
       background-color: #0b0d10;
       color: #ffffff;
-      line-height: 1.6;
+      padding: 1rem;
     }
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.2rem 2rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 1.5rem;
     }
     .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #e50914;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .stat-card {
+      background: #141820;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .stat-card h4 {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-bottom: 0.3rem;
+    }
+    .stat-card p {
       font-size: 1.5rem;
       font-weight: 700;
-      letter-spacing: -0.5px;
+      color: #f3f4f6;
     }
-    .cta-btn-sm {
-      background: #e50914;
-      color: #fff;
-      border: none;
-      padding: 0.5rem 1.2rem;
-      border-radius: 999px;
-      font-weight: 600;
-      cursor: pointer;
+    .section-box {
+      background: #141820;
+      padding: 1.2rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 1.5rem;
     }
-    .hero {
-      padding: 4rem 1.5rem 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .badge {
-      color: #9ca3af;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    h2 {
+      font-size: 1.1rem;
       margin-bottom: 1rem;
-      display: inline-block;
+      color: #f3f4f6;
     }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 1.2rem;
-    }
-    p.desc {
-      color: #9ca3af;
-      font-size: 1.05rem;
-      margin-bottom: 2rem;
-    }
-    .btn-group {
+    form {
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
     }
-    .btn {
-      width: 100%;
-      padding: 0.9rem 1.5rem;
-      border-radius: 999px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      border: none;
-    }
-    .btn-primary {
-      background: #e50914;
+    input, select {
+      background: #0b0d10;
+      border: 1px solid rgba(255, 255, 255, 0.2);
       color: #ffffff;
-    }
-    .btn-secondary {
-      background: #1f242d;
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .features {
-      padding: 3rem 1.5rem;
-      max-width: 800px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.2rem;
-    }
-    .card {
-      background: #141820;
-      padding: 1.5rem;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: #f3f4f6;
-    }
-    .card p {
-      color: #9ca3af;
+      padding: 0.7rem;
+      border-radius: 6px;
       font-size: 0.95rem;
     }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: #6b7280;
-      font-size: 0.85rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    input:focus, select:focus {
+      outline: 1px solid #e50914;
+    }
+    button.btn-add {
+      background: #e50914;
+      color: #fff;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .table-container {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    th, td {
+      padding: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    th {
+      color: #9ca3af;
+      font-weight: 600;
+    }
+    .status-active {
+      color: #10b981;
+      font-weight: 600;
+    }
+    .status-unpaid {
+      color: #f59e0b;
+      font-weight: 600;
+    }
+    .action-btn {
+      background: #252c38;
+      color: #ffffff;
+      border: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      margin-right: 0.3rem;
+    }
+    .del-btn {
+      background: #ef4444;
+      color: #fff;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">Fitflow</div>
-    <button class="cta-btn-sm" onclick="showPopup('Member Registration Modal')">Get started</button>
+    <div class="logo">Fitflow Admin</div>
+    <span style="font-size: 0.85rem; color: #9ca3af;">Cloud System</span>
   </header>
 
-  <section class="hero">
-    <span class="badge">Cloud Gym Management</span>
-    <h1>Run your entire gym from one dashboard</h1>
-    <p class="desc">
-      Fitflow brings member registration, payments, attendance, and trainer schedules into one cloud dashboard for your entire gym operation.
-    </p>
-    <div class="btn-group">
-      <button class="btn btn-primary" onclick="showPopup('Demo Booking Modal')">Explore Fitflow</button>
-      <button class="btn btn-secondary" onclick="showPopup('Schedule Call Modal')">Book a demo</button>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h4>Active Members</h4>
+      <p id="totalMembers">2</p>
     </div>
-  </section>
+    <div class="stat-card">
+      <h4>Monthly Revenue</h4>
+      <p id="totalRevenue">₹3,500</p>
+    </div>
+  </div>
 
-  <section class="features">
-    <div class="card">
-      <h3>🏋️ Member & Attendance Tracking</h3>
-      <p>Automated digital check-ins with RFID and QR codes for seamless member flow.</p>
-    </div>
-    <div class="card">
-      <h3>💳 Billing & Fee Reminders</h3>
-      <p>Instant online payments, auto-renewals, and WhatsApp invoice alerts.</p>
-    </div>
-    <div class="card">
-      <h3>📅 Trainer & Slot Scheduling</h3>
-      <p>Manage trainer allocations, personal training sessions, and workout routines.</p>
-    </div>
-  </section>
+  <div class="section-box">
+    <h2>➕ Add New Gym Member</h2>
+    <form id="memberForm">
+      <input type="text" id="name" placeholder="Member Name" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <select id="plan">
+        <option value="1500">Monthly Plan (₹1,500)</option>
+        <option value="4000">Quarterly Plan (₹4,000)</option>
+        <option value="12000">Yearly VIP (₹12,000)</option>
+      </select>
+      <button type="submit" class="btn-add">Register Member</button>
+    </form>
+  </div>
 
-  <footer>
-    <p>© 2026 Fitflow System. Built with HTML5, CSS3 & JavaScript.</p>
-  </footer>
+  <div class="section-box">
+    <h2>📋 Member Directory</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Plan</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="memberTableBody">
+          <!-- Members Render Dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
 
   <script>
-    function showPopup(featureName) {
-      alert("Fitflow System: " + featureName + " action triggered successfully!");
+    let members = [
+      { id: 1, name: "Aman Sharma", phone: "9876543210", fee: 1500, status: "Active" },
+      { id: 2, name: "Rohan Verma", phone: "9812345678", fee: 2000, status: "Unpaid" }
+    ];
+
+    function updateDashboard() {
+      const tableBody = document.getElementById("memberTableBody");
+      tableBody.innerHTML = "";
+
+      let revenue = 0;
+      members.forEach((m) => {
+        if (m.status === "Active") revenue += Number(m.fee);
+
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td><strong>${m.name}</strong><br><small style="color:#9ca3af;">${m.phone}</small></td>
+          <td>₹${m.fee}</td>
+          <td><span class="${m.status === 'Active' ? 'status-active' : 'status-unpaid'}">${m.status}</span></td>
+          <td>
+            <button class="action-btn" onclick="toggleStatus(${m.id})">Toggle</button>
+            <button class="action-btn del-btn" onclick="deleteMember(${m.id})">Del</button>
+          </td>
+        `;
+        tableBody.appendChild(row);
+      });
+
+      document.getElementById("totalMembers").innerText = members.length;
+      document.getElementById("totalRevenue").innerText = "₹" + revenue.toLocaleString("en-IN");
     }
+
+    document.getElementById("memberForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const fee = document.getElementById("plan").value;
+
+      members.push({
+        id: Date.now(),
+        name: name,
+        phone: phone,
+        fee: fee,
+        status: "Active"
+      });
+
+      this.reset();
+      updateDashboard();
+    });
+
+    function toggleStatus(id) {
+      members = members.map(m => {
+        if (m.id === id) {
+          m.status = m.status === "Active" ? "Unpaid" : "Active";
+        }
+        return m;
+      });
+      updateDashboard();
+    }
+
+    function deleteMember(id) {
+      members = members.filter(m => m.id !== id);
+      updateDashboard();
+    }
+
+    // Initial render
+    updateDashboard();
   </script>
 </body>
 </html>
