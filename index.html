@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitflow - Cloud Gym Management System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    body {
+      background-color: #0b0d10;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .cta-btn-sm {
+      background: #e50914;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .hero {
+      padding: 4rem 1.5rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .badge {
+      color: #9ca3af;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+    p.desc {
+      color: #9ca3af;
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .btn {
+      width: 100%;
+      padding: 0.9rem 1.5rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+    }
+    .btn-primary {
+      background: #e50914;
+      color: #ffffff;
+    }
+    .btn-secondary {
+      background: #1f242d;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .features {
+      padding: 3rem 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+    .card {
+      background: #141820;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #f3f4f6;
+    }
+    .card p {
+      color: #9ca3af;
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #6b7280;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Fitflow</div>
+    <button class="cta-btn-sm" onclick="showPopup('Member Registration Modal')">Get started</button>
+  </header>
+
+  <section class="hero">
+    <span class="badge">Cloud Gym Management</span>
+    <h1>Run your entire gym from one dashboard</h1>
+    <p class="desc">
+      Fitflow brings member registration, payments, attendance, and trainer schedules into one cloud dashboard for your entire gym operation.
+    </p>
+    <div class="btn-group">
+      <button class="btn btn-primary" onclick="showPopup('Demo Booking Modal')">Explore Fitflow</button>
+      <button class="btn btn-secondary" onclick="showPopup('Schedule Call Modal')">Book a demo</button>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <h3>🏋️ Member & Attendance Tracking</h3>
+      <p>Automated digital check-ins with RFID and QR codes for seamless member flow.</p>
+    </div>
+    <div class="card">
+      <h3>💳 Billing & Fee Reminders</h3>
+      <p>Instant online payments, auto-renewals, and WhatsApp invoice alerts.</p>
+    </div>
+    <div class="card">
+      <h3>📅 Trainer & Slot Scheduling</h3>
+      <p>Manage trainer allocations, personal training sessions, and workout routines.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Fitflow System. Built with HTML5, CSS3 & JavaScript.</p>
+  </footer>
+
+  <script>
+    function showPopup(featureName) {
+      alert("Fitflow System: " + featureName + " action triggered successfully!");
+    }
+  </script>
+</body>
+</html>
